@@ -37,15 +37,15 @@ const Model = () => {
     useEffect(() => {
       if(size === 'large'){
         animateWithGsapTimeline(tl, small, smallRotation, '#view1', '#view2', {
-            transfrom: 'translateX(-100%)',
+            transform: 'translateX(-100%)',
             duration: 2
         })
       }
       
       if(size === 'small'){
         animateWithGsapTimeline(tl, large, largeRotation, '#view2', '#view1', {
-            transfrom: 'translateX(0)',
-            duration: 2,
+           transform: 'translateX(0)',
+            duration: 2, 
         })
       }
     }, [size])
@@ -115,7 +115,7 @@ const Model = () => {
                             <button className="size-btn-container">
                                 {sizes.map(({ label, value }) => (
                                     <span key={label} className="size-btn"
-                                        style={{ backgroundColor: size === value ? 'white' : 'transparent', color: size === value ? 'black' : ' white' }} onClick={() => setSize(value)}>
+                                        style={{ backgroundColor: size === value ? 'white' : 'transparent', color: size === value ? 'black' : ' white'}} onClick={() => setSize(value)}>
                                         {label}
                                     </span>
                                 ))}
